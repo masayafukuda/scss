@@ -1,0 +1,76 @@
+/* Scss Document */
+//ブレークポイント
+@mixin mq($breakpoint: md) {
+  @if $breakpoint == xs {
+    @media screen and (min-width: 320px) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+  }
+}
+
+//font-size rem html62.5%のとき
+@mixin fz($size: 24, $base: 16){
+  font-size: $size + px;
+  font-size: ($size / ($base * 0.625)) + rem;
+}
+
+//font-size rem html未指定のとき
+@mixin font-size($size, $base: 16) {
+　　font-size: $size + px;
+　　font-size: ($size / $base) + rem;
+}
+
+//font-size vw
+@mixin vw($size){
+  $winW : 640;  // 画面幅を設定する
+  font-size: ($size / $winW) * 100 + vw;
+}
+
+//センター配置
+@mixin center-layout($width, $max: false) {
+  display: block;
+  @if $max {
+    max-width: $width;
+  } @else {
+    width: $width;
+  }
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//トランジション
+@mixin transition($duration:0.2s){
+-webkit-transition:$duration ease-out;
+-moz-transition:$duration ease-out;
+-ms-transition:$duration ease-out;
+transition:$duration ease-out;
+}
+
+//リンクカラーホバー時に準補色、訪問時にに近似色になる
+@mixin lc($color) {
+  color: $color;
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+    color: adjust-hue($color, 150deg);
+  }
+  &:visited {
+    color: adjust-hue($color, 30deg);
+    text-decoration: underline;
+  }
+}

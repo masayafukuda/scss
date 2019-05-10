@@ -1,0 +1,41 @@
+@import "reboot";
+@import "setting";
+@import "mixin";
+/* =====================================
+ *  contents 実装例
+ * ===================================== */
+//フォントサイズ指定実例（html62.5%）
+.hoge{
+  @include mq {// デフォルトはタブレットまで
+     @include fz(16)
+  }
+  @include mq(xs) {// タブレット以下はここ
+     @include vw(28)// 640pxで作られたカンプで28px（実サイズ14px想定）のフォントサイズの時
+  }
+}
+//フォントサイズ指定実例（html100%）
+.hoge{
+  @include mq {// デフォルトはタブレットまで
+     @include font-size(16)
+  }
+  @include mq(xs) {// タブレット以下はここ
+     @include vw(28)// 640pxで作られたカンプで28px（実サイズ14px想定）のフォントサイズの時
+  }
+}
+
+//センター配置実例
+.elements01 {
+  @include center-layout(960px);
+}
+
+.elements02 {
+  @include center-layout(1200px, true);
+}
+.move{
+@include transition(0.5s);
+}
+
+a {
+  @include lc(#34322f);
+	@include transition;
+}

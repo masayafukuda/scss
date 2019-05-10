@@ -1,0 +1,54 @@
+@charset "utf-8";
+// ===================================================================
+// 設定
+// ===================================================================
+
+// 汎用クラスを使用するか
+$use_extend_object: true;
+
+// 簡易ロールオーバーの値
+$opacity_value: .6;
+
+// 余白調整用のクラスを使用するか
+$use_spacing_classes: false;
+
+// ベースフォント
+$base_font: 'Noto Sans Japanese', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+$base_font_ie: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+$font-mincyo: "Noto Serif Japanese", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+
+// ページ全体の横幅
+$base_width: 1200px;
+$jisyo_width: 1024px;
+
+// 要素の基本下マージン
+$base_margin_bottom: 15px;
+
+
+// メインカラー（ベースカラー）
+$main_color: #fff;
+
+// サブカラー
+$sub_color: #eee;
+
+// アクセントカラー
+$accent_color: #e73562;
+
+// ベーステキストカラー
+$font_color: #333;
+
+// ベースリンクカラー
+$link_color: #06f;
+$link_color_visited: #39f;
+$link_color_hover: #00f;
+$link_color_active: #00f;
+
+
+// 付与するベンダープレフィックス
+$set_prefix: -webkit-, -moz-, -ms-, -o-, '';
+
+// 角丸の初期値
+$br_value: 3px;
+
+
